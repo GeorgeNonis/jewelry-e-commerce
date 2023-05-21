@@ -1,0 +1,94 @@
+@import "../../styles/mixins.module.scss";
+
+@media (max-width: 599px) {
+  .storeLocationPage {
+    width: 90%;
+    grid-template-rows: 1fr 1fr;
+    height: 100dvh;
+  }
+}
+@media (max-width: 450px) {
+  .storeLocationPage {
+    width: 90%;
+    grid-template-rows: 1fr 1fr;
+    height: 100dvh;
+  }
+}
+@media (min-width: 599px) {
+  .storeLocationPage {
+    width: 90%;
+    grid-template-rows: 1fr 1fr;
+    height: 100dvh;
+  }
+}
+@media (min-width: 1200px) {
+  .storeLocationPage {
+    width: 70%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: unset;
+
+    height: 30rem;
+  }
+}
+@media (min-width: 2400px) {
+  .storeLocationPage {
+    width: 90%;
+    grid-template-rows: 1fr 1fr;
+    height: 100dvh;
+  }
+}
+
+.storeLocationPage {
+  display: grid;
+  // grid-template-columns: 1fr 1fr;
+  place-items: center;
+  // width: 70%;
+  // height: 30rem;
+  margin-block: 5rem;
+  margin-inline: auto;
+  position: relative;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.visitDiv {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  gap: 1rem;
+  background: #fff9d6;
+  font-family: "Montserrat";
+  text-align: center;
+
+  a {
+    color: white;
+    background: black;
+    padding: 0.5rem 2rem;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: black;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+  p {
+    width: 80%;
+  }
+}

@@ -1,0 +1,179 @@
+@import "../../styles/mixins.module.scss";
+
+@media (max-width: 599px) {
+  .contactUsPage {
+    width: 90%;
+  }
+}
+@media (max-width: 450px) {
+  .contactUsPage {
+    width: 90%;
+  }
+}
+@media (min-width: 599px) {
+  .contactUsPage {
+    width: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  .contactUsPage {
+    width: 70%;
+  }
+}
+@media (min-width: 1441px) {
+  .contactUsPage {
+    width: 70%;
+  }
+}
+
+.contactUsPage {
+  // width: 70%;
+  margin-inline: auto;
+  margin-block: 5rem;
+  text-align: center;
+  font-family: "'Montserrat'";
+  display: grid;
+  gap: 2rem;
+  .title {
+    font-family: "'Montserrat'";
+  }
+  .contactusdiv {
+    background-color: rgb(237, 237, 237);
+    width: 80%;
+
+    margin-inline: auto;
+    padding: 2rem;
+    h3 {
+      font-size: 1rem;
+      font-family: "Montserrat";
+      font-weight: 400;
+      text-align: start;
+    }
+  }
+  .topicdiv {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    place-items: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
+    gap: 1rem;
+    span {
+      border: 1px solid black;
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      display: grid;
+      place-items: center;
+    }
+    h2 {
+      margin: 0;
+      place-self: start;
+      align-self: auto;
+      font-family: "'Montserrat'";
+      font-weight: 500;
+    }
+  }
+
+  .topicinput {
+    position: relative;
+    h4 {
+      position: absolute;
+      left: 1rem;
+      top: 0.5rem;
+      font-weight: 100;
+      font-size: 0.8rem;
+    }
+    input {
+      width: 100%;
+      background-color: white;
+      padding: 2rem 1rem 1rem 1rem;
+      outline: none;
+      cursor: pointer;
+      color: black;
+      font-family: "'Montserrat'";
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+    svg {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+    }
+  }
+  .topicoptions {
+    background-color: white;
+    font-size: 1.2rem;
+    font-family: "Montserrat";
+    display: grid;
+    gap: 0.5rem;
+    padding: 0;
+    text-align: start;
+    position: absolute;
+    right: 0;
+    left: 0;
+    border: 1px solid black;
+    border-top: none;
+    height: 0;
+    transition: height ease-in-out 250ms;
+    overflow: hidden;
+    z-index: 1;
+    div {
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      &:hover {
+        background-color: rgb(237 237 237);
+      }
+    }
+  }
+}
+
+.tickmark {
+  color: white;
+  width: 1rem;
+  height: 1rem;
+}
+
+.contactoptions {
+  display: grid;
+  gap: 4rem;
+  margin-block: 3rem;
+}
+
+.contactitle {
+  margin-top: 2rem !important;
+}
+
+.phone {
+  text-align: start;
+  h1 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  a {
+    all: unset;
+    cursor: pointer;
+    color: black;
+  }
+}
+
+.test {
+  height: 0;
+
+  overflow: hidden;
+
+  transition: height ease-in 250ms;
+}
+
+.contactinfo {
+  overflow: hidden;
+  height: 0;
+  transition: height ease-in-out 250ms;
+}
+
+.customerLoc {
+  padding-top: 1rem;
+}

@@ -1,0 +1,134 @@
+@import "../../../styles/mixins.module.scss";
+
+@media (max-width: 599px) {
+  .bestproductssection {
+    width: 95%;
+  }
+  .products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 450px) {
+  .bestproductssection {
+    width: 95%;
+    .bestproductstitle {
+      font-size: 1.7rem;
+    }
+    .products {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+@media (min-width: 599px) {
+  .bestproductssection {
+    width: 95%;
+    .bestproductstitle {
+      font-size: 1.7rem;
+    }
+    .products {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 1fr;
+    }
+    .itemname {
+      font-size: 1.2rem;
+    }
+    .itemprice {
+      font-size: 1.2rem;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .bestproductssection {
+    width: 70%;
+    .bestproductstitle {
+      font-size: 1.7rem;
+    }
+    .products {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 1fr;
+    }
+    .itemname {
+      font-size: 1.2rem;
+    }
+    .itemprice {
+      font-size: 1.2rem;
+    }
+    .item {
+      grid-gap: 1rem;
+    }
+  }
+}
+@media (min-width: 2400px) {
+  .bestproductssection {
+    width: 70%;
+    .bestproductstitle {
+      font-size: 3rem;
+    }
+    .products {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 1fr;
+    }
+    .itemname {
+      font-size: 2rem;
+    }
+    .itemprice {
+      font-size: 2rem;
+    }
+    .item {
+      grid-gap: 2rem;
+    }
+  }
+}
+
+.bestproductssection {
+  // width: 70%;
+  margin-inline: auto;
+  margin-top: 3rem;
+}
+
+.bestproductstitle {
+  text-align: start;
+  font-family: "Rajdhani", sans-serif;
+
+  font-weight: 800;
+  color: black;
+  margin-block: 2rem;
+}
+
+.products {
+  display: grid;
+  // grid-template-columns: repeat(4, 1fr);
+  // grid-template-rows: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.item {
+  position: relative;
+  display: grid;
+  grid-auto-flow: row;
+  transition: all ease-in-out 250ms;
+  cursor: pointer;
+
+  .mask {
+    position: absolute;
+    inset: 0 0 0 0;
+    z-index: 2;
+    transition: all ease-in-out 250ms;
+    &:hover {
+      background: #d4d4d44a !important;
+    }
+  }
+  .itemimg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .itemname {
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+  }
+  .itemprice {
+    font-weight: 700;
+    font-family: monospace;
+  }
+}

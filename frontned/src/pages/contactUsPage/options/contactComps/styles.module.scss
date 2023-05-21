@@ -1,0 +1,54 @@
+.contactactiondiv {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  place-items: center;
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding-bottom: 2rem;
+  svg {
+    position: static !important;
+  }
+}
+
+.estimateddiv {
+  width: 100%;
+  h2 {
+    font-size: 1rem;
+    margin: 0;
+    text-align: start;
+  }
+  h3 {
+    font-size: 1rem;
+    margin: 0;
+    text-align: start;
+  }
+}
+
+.btn {
+  all: unset;
+  background: black;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  font-size: 1rem;
+  font-family: "Montserrat";
+  width: 85%;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}

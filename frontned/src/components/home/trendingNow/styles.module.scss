@@ -1,0 +1,92 @@
+@import "../../../styles/mixins.module.scss";
+
+@media (max-width: 599px) {
+  .carouselContainer {
+    width: 95%;
+  }
+  .sectionTitle {
+    width: 95%;
+  }
+}
+@media (max-width: 450px) {
+  .carouselContainer {
+    width: 95%;
+  }
+  .sectionTitle {
+    width: 95%;
+  }
+}
+@media (min-width: 599px) {
+  .carouselContainer {
+    width: 95%;
+  }
+  .sectionTitle {
+    width: 95%;
+  }
+}
+@media (min-width: 1200px) {
+  .carouselContainer {
+    width: 70%;
+  }
+  .sectionTitle {
+    width: 70%;
+  }
+}
+@media (min-width: 2400px) {
+  .carouselContainer {
+    width: 70%;
+  }
+  .sectionTitle {
+    width: 70%;
+  }
+}
+
+.trendingContainer {
+  margin-block: 5rem;
+}
+.carouselContainer {
+  margin-inline: auto;
+}
+
+.sectionTitle {
+  text-align: start;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: black;
+  margin-inline: auto;
+  margin-block: 2rem;
+}
+
+.item {
+  position: relative;
+  display: grid;
+  grid-auto-flow: row;
+  margin-inline: 1rem;
+  transition: all ease-in-out 250ms;
+  cursor: pointer;
+
+  .mask {
+    position: absolute;
+    inset: 0 0 0 0;
+    z-index: 2;
+    transition: all ease-in-out 250ms;
+    &:hover {
+      background: #d4d4d44a !important;
+    }
+  }
+  .itemimg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .itemname {
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+  }
+  .itemprice {
+    font-weight: 700;
+    font-family: monospace;
+    font-size: 1rem;
+  }
+}

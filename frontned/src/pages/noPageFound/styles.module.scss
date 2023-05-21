@@ -1,0 +1,28 @@
+.main {
+  position: absolute;
+  inset: 50% 0 0 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-content: center;
+  place-items: center;
+  font-family: CormorantGaramond;
+
+  a {
+    all: unset;
+    button {
+      font-size: 1.1rem;
+      font-family: CormorantGaramond;
+      width: 9rem;
+      height: 3.6rem;
+      border: none;
+      border-radius: 12px;
+      background: #f26716;
+      cursor: pointer;
+      transition: all 250ms ease-in-out;
+      &:hover {
+        width: 10rem;
+        height: 4.5rem;
+      }
+    }
+  }
+}

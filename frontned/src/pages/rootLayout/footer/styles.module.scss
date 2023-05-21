@@ -1,0 +1,69 @@
+@import "../../../styles/mixins.module.scss";
+
+@media (max-width: 599px) {
+}
+@media (max-width: 450px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (min-width: 599px) {
+  .container {
+    width: 70%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 70%;
+  }
+}
+@media (min-width: 2400px) {
+  .container {
+    width: 70%;
+  }
+}
+
+.footerContent {
+  width: 100%;
+  height: 15rem;
+  background-color: black;
+}
+
+.container {
+  // width: 50%;
+  height: 100%;
+  margin-inline: auto;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1.5rem;
+  place-items: center;
+  a {
+    all: unset;
+    position: relative;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+
+  li {
+    color: white;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+  }
+}

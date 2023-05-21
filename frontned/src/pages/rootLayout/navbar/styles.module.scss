@@ -1,0 +1,63 @@
+.container {
+  margin-inline: auto;
+  border-bottom: 1px solid gold;
+}
+
+.navbarContent {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  height: 8rem;
+  width: 70%;
+  z-index: 2;
+  background: white;
+  margin-inline: auto;
+  .logo {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .actions {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1.5rem;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: fangsong;
+    font-weight: 100;
+
+    h3 {
+      cursor: pointer;
+      margin: 0;
+      font-weight: 100;
+    }
+    a {
+      all: unset;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -3px;
+        left: 0;
+        background-color: black;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
