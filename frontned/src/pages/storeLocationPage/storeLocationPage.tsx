@@ -5,7 +5,7 @@ import { coordinations } from "../../config";
 
 export default function Home() {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "",
+    googleMapsApiKey: import.meta.env.GOOGLE_API,
   });
 
   if (!isLoaded) return <div>Loading...</div>;
