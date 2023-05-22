@@ -1,8 +1,9 @@
 import { Outlet, useLocation } from "react-router-dom";
-import styles from "./styles.module.scss";
 import * as Comp from "../../components";
 import { useEffect, useState } from "react";
-import ScrollToTop from "../../components/scrollToTop/scrollToTop";
+import ScrollToTop from "../../components/scrollToTop";
+import Cart from "../../components/cart";
+import styles from "./styles.module.scss";
 
 const RootLayout = () => {
   const location = useLocation();
@@ -16,6 +17,7 @@ const RootLayout = () => {
     <main className={styles.mainContent}>
       <Comp.Navbar />
       {loading ? <Comp.LoadingSpinner /> : <Outlet />}
+      <Cart />
       <ScrollToTop />
       <Comp.Footer />
     </main>

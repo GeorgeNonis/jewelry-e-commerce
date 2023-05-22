@@ -7,7 +7,12 @@ import { useNavbar } from "./useNavbar";
 import MobileMenu from "./mobileMenu/mobileMenu";
 
 const Navbar = () => {
-  const { cartHandler, crtState } = useNavbar();
+  const {
+    burgerHandler,
+    burgerMenu: burgerState,
+    cartHandler,
+    cart,
+  } = useNavbar();
   const itemsLength = allCategories[4].items.length;
   return (
     <div className={styles.container}>
@@ -30,10 +35,13 @@ const Navbar = () => {
           >
             <h3>Products Page</h3>
           </Link>
-          <BsFillCartFill />
+          <div className={styles.cartQuantity}>
+            <span className={styles.cartSpan}>{cart.quantity}</span>
+            <BsFillCartFill onClick={cartHandler} />
+          </div>
         </div>
-        {<MobileMenu handler={cartHandler} crt={crtState} />}
-        <div className={styles.phone} onClick={cartHandler}>
+        {<MobileMenu handler={burgerHandler} crt={burgerState} />}
+        <div className={styles.phone} onClick={burgerHandler}>
           <BsFillCartFill />
           <RxHamburgerMenu />
         </div>

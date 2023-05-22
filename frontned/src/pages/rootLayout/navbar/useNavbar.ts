@@ -1,18 +1,22 @@
 import { useDispatch, useSelector } from "react-redux";
-import { cartState } from "../../../store/cart-slice";
+import { cartState, burgerState } from "../../../store/cart-slice";
 import { IRootState } from "../../../store/store";
 
 export const useNavbar = () => {
-  const { cartState: crtState } = useSelector(
-    (state: IRootState) => state.cart
-  );
+  const { burgerMenu, cart } = useSelector((state: IRootState) => state.cart);
   const dispatch = useDispatch();
+
+  const burgerHandler = () => {
+    dispatch(burgerState());
+  };
 
   const cartHandler = () => {
     dispatch(cartState());
   };
   return {
+    burgerHandler,
+    burgerMenu,
     cartHandler,
-    crtState,
+    cart,
   };
 };

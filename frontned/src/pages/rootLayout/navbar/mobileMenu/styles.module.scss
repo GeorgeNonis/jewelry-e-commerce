@@ -4,6 +4,7 @@
   right: 1rem;
   width: 2rem;
   height: 2rem;
+  cursor: pointer;
 }
 
 .hide {
@@ -21,7 +22,6 @@
   left: 0;
   right: 0;
   transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
-  //   overflow: scroll;
   z-index: 1000;
   display: grid;
   gap: 3rem;
