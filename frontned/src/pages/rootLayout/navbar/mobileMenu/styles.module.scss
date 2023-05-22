@@ -1,0 +1,83 @@
+.xMark {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.hide {
+  transform: translate3d(100vw, 0, 0);
+}
+
+.show {
+  transform: translate3d(0vw, 0, 0);
+  overflow: hidden;
+}
+.mobilemenu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  //   overflow: scroll;
+  z-index: 1000;
+  display: grid;
+  gap: 3rem;
+  place-content: center;
+  place-items: center;
+  text-transform: uppercase;
+  font-family: fangsong;
+  font-weight: 100;
+  text-align: center;
+  background-color: white;
+  h3 {
+    cursor: pointer;
+    margin: 0;
+    font-weight: 100;
+  }
+  a {
+    all: unset;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: black;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}
+
+@keyframes test {
+  0% {
+    opacity: 0;
+    left: 50rem;
+    right: 50rem;
+  }
+  25% {
+    opacity: 0.2;
+    left: 25rem;
+    right: 25rem;
+  }
+  50% {
+    opacity: 0.6;
+    left: 10rem;
+    right: 10rem;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+    right: 0;
+  }
+}

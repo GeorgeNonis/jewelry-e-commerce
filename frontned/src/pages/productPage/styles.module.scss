@@ -3,8 +3,10 @@
 @media (max-width: 599px) {
   .sectionContent {
     grid-template-rows: repeat(3, 1fr);
-
     width: 90%;
+    .productstats {
+      grid-auto-flow: column;
+    }
   }
 }
 @media (max-width: 450px) {
@@ -18,21 +20,46 @@
 }
 @media (min-width: 599px) {
   .sectionContent {
-    grid-template-rows: repeat(3, 1fr);
-
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     width: 90%;
+    // height: 62rem;
+    height: 85vh;
+    .productstats {
+      grid-column: 1/3;
+      grid-auto-flow: column;
+      div {
+        width: 80%;
+      }
+    }
   }
 }
 @media (min-width: 1200px) {
   .sectionContent {
     grid-template-columns: 1fr 1fr;
-    width: 90%;
+    height: 62rem;
+    width: 70%;
+    .productstats {
+      grid-column: 1/3;
+      grid-auto-flow: column;
+      div {
+        width: 80%;
+      }
+    }
   }
 }
 @media (min-width: 2400px) {
   .sectionContent {
     grid-template-columns: 1fr 1fr;
-    width: 90%;
+    height: 60vh;
+    width: 70%;
+    .productstats {
+      grid-column: 1/3;
+      grid-auto-flow: column;
+      div {
+        width: 80%;
+      }
+    }
   }
 }
 

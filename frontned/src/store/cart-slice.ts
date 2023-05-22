@@ -7,12 +7,12 @@ const cart = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    initial(state, { payload }) {
-      console.log("x");
+    cartState(state) {
+      state.cartState = !state.cartState;
     },
   },
 });
 
-export const { initial } = cart.actions;
+export const { cartState } = cart.actions;
 
 export default cart.reducer;

@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import styles from "./styles.module.scss";
 import * as Comp from "../../components";
-import { useEffect, Suspense, useState } from "react";
+import { useEffect, useState } from "react";
 import ScrollToTop from "../../components/scrollToTop/scrollToTop";
 
 const RootLayout = () => {

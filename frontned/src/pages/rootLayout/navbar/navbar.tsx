@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import { BsFillCartFill } from "react-icons/bs";
-import styles from "./styles.module.scss";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { allCategories } from "../../../config";
+import styles from "./styles.module.scss";
+import { useNavbar } from "./useNavbar";
+import MobileMenu from "./mobileMenu/mobileMenu";
 
 const Navbar = () => {
+  const { cartHandler, crtState } = useNavbar();
   const itemsLength = allCategories[4].items.length;
-  console.log({ itemsLength });
-  console.log(Math.floor(Math.random() * itemsLength));
-  console.log(allCategories[4].items[Math.floor(Math.random() * itemsLength)]);
   return (
     <div className={styles.container}>
       <div className={styles.navbarContent}>
@@ -30,6 +31,11 @@ const Navbar = () => {
             <h3>Products Page</h3>
           </Link>
           <BsFillCartFill />
+        </div>
+        {<MobileMenu handler={cartHandler} crt={crtState} />}
+        <div className={styles.phone} onClick={cartHandler}>
+          <BsFillCartFill />
+          <RxHamburgerMenu />
         </div>
       </div>
     </div>

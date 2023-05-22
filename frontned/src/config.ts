@@ -2,6 +2,7 @@ import { TfiEmail } from "react-icons/tfi";
 import { BsTelephoneOutbound } from "react-icons/bs";
 import { GenericObj } from "./pages/contactUsPage/options/interfaces";
 
+export const LOCATION_API = import.meta.env.GOOGLE_API;
 export const coordinations = { lat: 56.162937, lng: 10.203921 };
 
 export const footerLinks = [
@@ -15,22 +16,22 @@ export const footerLinks = [
 export const categories = [
   {
     name: "Summer",
-    img: "/categories/summer.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107437607169835008/Neilyo77_I_would_like_an_image_of_jewelry_with_a_summery_feel.__e08616e3-b4de-4f05-8411-b1da6059cba8.png",
     gridArea: "one",
   },
   {
     name: "Stones",
-    img: "/categories/stones.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1108053390367408168/Neilyo77_Design_Brief_for_Image_Featuring_Three_Types_of_Jewelr_dac5fa88-479e-459f-b590-22df325cfc6a.png",
     gridArea: "two",
   },
   {
     name: "Polymer Clay",
-    img: "/categories/polymer.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1108049524716470323/Neilyo77_Please_generate_an_image_of_polymer_clay_jewelry_that__6e44c8e7-86d7-48e0-abd0-8c1078ab41bb.png",
     gridArea: "four",
   },
   {
     name: "Offers",
-    img: "/categories/offers.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1108053374781374494/Neilyo77_Design_Brief_for_Image_Featuring_Three_Types_of_Jewelr_8a76e558-f026-4f12-b16e-fa1b73e08267.png",
     gridArea: "four-low",
   },
 ];
@@ -38,7 +39,7 @@ export const categories = [
 export const stones = [
   {
     name: "Stellar Gem Pendant",
-    img: "/stones/stone1.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107451386817429554/Neilyo77_I_would_like_an_image_of_jewelry_with_a_luxurious_feel_2773782f-245d-4f15-a947-8412e56d200d.png",
     id: 123123,
     price: 210,
     texture: "Smooth",
@@ -49,7 +50,7 @@ export const stones = [
   },
   {
     name: "Azure Elegance Necklace",
-    img: "/stones/stone2.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107451371604672592/Neilyo77_I_would_like_an_image_of_jewelry_with_a_luxurious_feel_e9ff2971-5fa9-4ee4-a2a7-dc8668bf9c95.png",
     id: 456456,
     price: 130,
     texture: "Polished",
@@ -60,7 +61,7 @@ export const stones = [
   },
   {
     name: "Radiant Amethyst Ring",
-    img: "/stones/stone3.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107451383315177572/Neilyo77_I_would_like_an_image_of_jewelry_with_a_luxurious_feel_b26498ba-1486-410c-88a3-408009bab3ca.png",
     id: 789789,
     price: 75,
     texture: "Faceted",
@@ -71,7 +72,7 @@ export const stones = [
   },
   {
     name: "Sapphire Cascade Earrings",
-    img: "/stones/stone4.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107450356025278475/Neilyo77_I_would_like_an_image_of_jewelry_with_a_luxurious_feel_bfdd0326-2158-426b-810d-01b33c771bfa.png",
     id: 10123010,
     price: 125,
     texture: "Smooth",
@@ -82,7 +83,7 @@ export const stones = [
   },
   {
     name: "Emerald Enchantment Bracelet",
-    img: "/stones/stone5.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107452192102809710/Neilyo77_I_would_like_an_image_of_jewelry_with_a_luxurious_feel_ba80572d-09ec-4192-a763-c67c8938c746.png",
     id: 111222,
     price: 199,
     texture: "Textured",
@@ -93,7 +94,7 @@ export const stones = [
   },
   {
     name: "Opal Dreamcatcher Anklet",
-    img: "/stones/stone6.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107452225929891950/Neilyo77_I_would_like_an_image_of_jewelry_with_a_luxurious_feel_e4a7018a-4f80-4878-8d38-cf2d3c3dac14.png",
     id: 333444,
     price: 320,
     texture: "Smooth",
@@ -104,7 +105,7 @@ export const stones = [
   },
   {
     name: "Ruby Twilight Brooch",
-    img: "/stones/stone7.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107450339331932301/Neilyo77_I_would_like_an_image_of_jewelry_with_a_luxurious_feel_b9346a92-c6ba-44c6-8f25-ce27a44e02a1.png",
     id: 555666,
     price: 400,
     texture: "Polished",
@@ -115,7 +116,7 @@ export const stones = [
   },
   {
     name: "Tanzanite Tranquility Cufflinks",
-    img: "/stones/stone8.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107450372840235059/Neilyo77_I_would_like_an_image_of_jewelry_with_a_luxurious_feel_f3074e92-4901-432e-9b69-ae2086e8a021.png",
     id: 777888,
     price: 300,
     texture: "Faceted",
@@ -126,7 +127,7 @@ export const stones = [
   },
   {
     name: "Citrine Sunburst Hairpin",
-    img: "/stones/stone9.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107450332021276692/Neilyo77_I_would_like_an_image_of_jewelry_with_a_luxurious_feel_839343b8-99bf-4049-b296-ba0308c15570.png",
     id: 999000,
     price: 280,
     texture: "Smooth",
@@ -140,7 +141,7 @@ export const stones = [
 export const summer = [
   {
     name: "Santorini Sunrise Necklace",
-    img: "/summer/summer1.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107438122712698962/Neilyo77_I_would_like_an_image_of_jewelry_with_a_summery_feel.__7d19afe8-8d49-4205-a8e5-ac1db0e81ca9.png",
     id: 1234567890,
     price: 20,
     texture: "Textured",
@@ -151,7 +152,7 @@ export const summer = [
   },
   {
     name: "Mykonos Breeze Bracelet",
-    img: "/summer/summer2.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107439923109306368/Neilyo77_I_would_like_an_image_of_jewelry_with_a_summery_feel_b_5ac42957-6c20-4f43-80eb-99c6887b4846.png",
     id: 2345678901,
     price: 50,
     texture: "Smooth",
@@ -162,7 +163,7 @@ export const summer = [
   },
   {
     name: "Crete Coastal Earrings",
-    img: "/summer/summer3.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107439924917043200/Neilyo77_I_would_like_an_image_of_jewelry_with_a_summery_feel_b_ea74b84a-aa73-4299-ab8c-891444ba2655.png",
     id: 3456789012,
     price: 35,
     texture: "Textured",
@@ -173,7 +174,7 @@ export const summer = [
   },
   {
     name: "Rhodes Sun Hat",
-    img: "/summer/summer4.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107439934383595551/Neilyo77_I_would_like_an_image_of_jewelry_with_a_summery_feel_b_5bb55994-0073-4b8b-b338-4d0936a1b5f4.png",
     id: 4567890123,
     price: 80,
     texture: "Smooth",
@@ -184,7 +185,7 @@ export const summer = [
   },
   {
     name: "Paros Seashell Anklet",
-    img: "/summer/summer5.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107440636606558288/Neilyo77_I_would_like_an_image_of_jewelry_with_a_summery_feel_b_fa06cea8-2b39-4349-89da-687d2cab6b06.png",
     id: 5678901234,
     price: 67,
     texture: "Textured",
@@ -195,7 +196,7 @@ export const summer = [
   },
   {
     name: "Naxos Beach Ring",
-    img: "/summer/summer6.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107440644831592468/Neilyo77_I_would_like_an_image_of_jewelry_with_a_summery_feel_b_edec3860-ed82-431d-b213-02af446f7a4f.png",
     id: 6789012345,
     price: 43,
     texture: "Polished",
@@ -206,7 +207,7 @@ export const summer = [
   },
   {
     name: "Corfu Island Bracelet",
-    img: "/summer/summer7.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107441124223746078/Neilyo77_I_would_like_an_image_of_jewelry_with_a_summery_feel_b_84cb375b-dc2a-41b5-903b-c7312b106d62.png",
     id: 7890123456,
     price: 90,
     texture: "Smooth",
@@ -217,7 +218,7 @@ export const summer = [
   },
   {
     name: "Zakynthos Sunset Pendant",
-    img: "/summer/summer8.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107441132142596178/Neilyo77_I_would_like_an_image_of_jewelry_with_a_summery_feel_b_070f7aef-fcbc-41df-9ed6-214630613114.png",
     id: 8901234567,
     price: 53,
     texture: "Textured",
@@ -228,7 +229,7 @@ export const summer = [
   },
   {
     name: "Milos Starfish Earrings",
-    img: "/summer/summer9.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107442133784338493/Neilyo77_I_would_like_an_image_of_jewelry_with_a_summery_feel_b_37b098ed-531b-4ca8-bae6-a2f999ff07de.png",
     id: 9012345678,
     price: 40,
     texture: "Polished",
@@ -241,7 +242,7 @@ export const summer = [
 export const polymer = [
   {
     name: "Ethereal Lace Earrings",
-    img: "/polymer/polymer1.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107595659072258068/Neilyo77_Please_generate_an_image_of_polymer_clay_jewelry_that__f7339084-ef66-4c3d-ac16-ffb419df9aad.png",
     id: 987654321,
     price: 80,
     texture: "Textured",
@@ -252,7 +253,7 @@ export const polymer = [
   },
   {
     name: "Whimsical Garden Pendant",
-    img: "/polymer/polymer2.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107595825699364934/Neilyo77_Please_generate_an_image_of_polymer_clay_jewelry_that__956c786b-ce3d-47b3-ad33-cff20c7465fd.png",
     id: 876543210,
     price: 66,
     texture: "Smooth",
@@ -263,7 +264,7 @@ export const polymer = [
   },
   {
     name: "Enchanting Blossom Bracelet",
-    img: "/polymer/polymer3.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107595643469434930/Neilyo77_Please_generate_an_image_of_polymer_clay_jewelry_that__23fcc22f-d15c-4384-812a-d19ce818e947.png",
     id: 765432109,
     price: 69,
     texture: "Textured",
@@ -274,7 +275,7 @@ export const polymer = [
   },
   {
     name: "Dainty Flutter Necklace",
-    img: "/polymer/polymer4.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107595694946140190/Neilyo77_Please_generate_an_image_of_polymer_clay_jewelry_that__02e6fd3a-509b-4880-8743-d255abe3c19a.png",
     id: 654321098,
     price: 99,
     texture: "Polished",
@@ -285,7 +286,7 @@ export const polymer = [
   },
   {
     name: "Serene Ocean Cufflinks",
-    img: "/polymer/polymer5.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107595683797663754/Neilyo77_Please_generate_an_image_of_polymer_clay_jewelry_that__a091b9ca-e3b8-4c6d-98b9-7875db91b965.png",
     id: 543210987,
     price: 130,
     texture: "Smooth",
@@ -296,7 +297,7 @@ export const polymer = [
   },
   {
     name: "Harmony Beaded Anklet",
-    img: "/polymer/polymer6.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107595611911495720/Neilyo77_Please_generate_an_image_of_polymer_clay_jewelry_that__5fe91e6b-c26d-4121-9d73-dc4f4ebd61c8.png",
     id: 432109876,
     price: 105,
     texture: "Textured",
@@ -307,7 +308,7 @@ export const polymer = [
   },
   {
     name: "Glowing Moonstone Ring",
-    img: "/polymer/polymer7.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107595671164436520/Neilyo77_Please_generate_an_image_of_polymer_clay_jewelry_that__0bda788c-0b9a-489c-8c8a-62d67e7e7971.png",
     id: 321098765,
     price: 92,
     texture: "Polished",
@@ -318,7 +319,7 @@ export const polymer = [
   },
   {
     name: "Spiral Dreamcatcher Pendant",
-    img: "/polymer/polymer8.png",
+    img: "https://cdn.discordapp.com/attachments/1056419450473152533/1107595801011703808/Neilyo77_Please_generate_an_image_of_polymer_clay_jewelry_that__085087a7-be5e-4fad-ae00-2475f28177b8.png",
     id: 210987654,
     price: 45,
     texture: "Smooth",

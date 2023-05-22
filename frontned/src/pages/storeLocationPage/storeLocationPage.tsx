@@ -1,11 +1,11 @@
 import { useMemo } from "react";
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import styles from "./styles.module.scss";
-import { coordinations } from "../../config";
+import { LOCATION_API, coordinations } from "../../config";
 
 export default function Home() {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: import.meta.env.GOOGLE_API,
+    googleMapsApiKey: LOCATION_API,
   });
 
   if (!isLoaded) return <div>Loading...</div>;

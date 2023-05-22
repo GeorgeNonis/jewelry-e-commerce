@@ -7,7 +7,10 @@ const FaqPage = () => {
   const { handleQuestionClick, openIndex } = useFaq();
   return (
     <section className={styles.faqpage}>
-      <img src="/otherSenctions/faq.png" alt="faq_picture" />
+      <img
+        src="https://cdn.discordapp.com/attachments/1056419450473152533/1108715091609784390/Neilyo77_Please_generate_a_description_for_an_image_showcasing__32d3d23b-d0f0-4ff4-9767-5811bdc181fa.png"
+        alt="faq_picture"
+      />
       <h1>Most asked questions</h1>
 
       <div className={styles.faqSenction}>

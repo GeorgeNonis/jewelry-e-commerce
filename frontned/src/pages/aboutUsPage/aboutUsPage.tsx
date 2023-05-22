@@ -21,7 +21,10 @@ const AboutUsPage = () => {
         <h3>Craftmanship & Mastery</h3>
         <div className={styles.arxesInsideDiv}>
           <div>
-            <img src="/otherSenctions/creativity.png" alt="creativity_image" />
+            <img
+              src="https://cdn.discordapp.com/attachments/1056419450473152533/1108104437857259670/Neilyo77_Please_generate_an_image_of_a_blueprint_for_a_captivat_d036b489-b8fd-4d79-968a-565706211bf6.png"
+              alt="creativity_image"
+            />
             <h3>Creativity</h3>
             <p>
               From inspiration brief to collection launch, Noni's creative
@@ -33,11 +36,10 @@ const AboutUsPage = () => {
             </p>
           </div>
           <div>
-            <img src="/otherSenctions/knowhow.png" alt="know_how_image" />
-            {/* <div
-              style={{ backgroundImage: `url(/otherSenctions/knowhow.png)` }}
-            ></div> */}
-
+            <img
+              src="https://cdn.discordapp.com/attachments/1056419450473152533/1108105241523658844/Neilyo77_Please_generate_an_image_of_diamonds_beautifully_arran_2db1def5-462a-4089-bc36-ce2b775ac74b.png"
+              alt="know_how_image"
+            />
             <h3>Know-How</h3>
             <p>
               New cuts, shades, and sizes are conceived and realized every day
@@ -50,10 +52,10 @@ const AboutUsPage = () => {
             </p>
           </div>
           <div>
-            <img src="/otherSenctions/quality.png" alt="quality_image" />
-            {/* <div
-              style={{ backgroundImage: `url(/otherSenctions/quality.png)` }}
-            ></div> */}
+            <img
+              src="https://cdn.discordapp.com/attachments/1056419450473152533/1108103702599958548/Neilyo77_createa_professionalhight-resolution_image_of_a_wooden_40f2148b-85a0-40d0-9f3e-f3fe14b74f19.png"
+              alt="quality_image"
+            />
 
             <h3>Quality</h3>
             <p>
@@ -68,7 +70,10 @@ const AboutUsPage = () => {
         </div>
       </div>
       <div className={styles.comeWondeRdiv}>
-        <img src="/otherSenctions/store.png" alt="store_image" />
+        <img
+          src="https://cdn.discordapp.com/attachments/1056419450473152533/1108439963181269012/Neilyo77_Create_a_professional_high-resolution_image_of_a_jewel_61b6a646-df4d-4222-b70e-f59c1175ea98.png"
+          alt="store_image"
+        />
         <div>
           <h3>COME WONDER</h3>
           <h2>Discover our store</h2>

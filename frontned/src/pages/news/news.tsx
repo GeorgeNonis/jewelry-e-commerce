@@ -13,15 +13,10 @@ const NewsPage = () => {
         as we unveil these exciting changes in the coming weeks, and get ready
         to embark on a journey of innovation and seamless user experience!
       </p>
-      <img src="/otherSenctions/news.png" alt="" />
-      {/* <div className={styles["news-section"]}>
-        <img src="/otherSenctions/modelonthrone.png" alt="Middle Image" />
-
-        <img src="/otherSenctions/model1.png" alt="Overlay Image 1" />
-        <img src="/otherSenctions/model2.png" alt="Overlay Image 2" />
-        <img src="/otherSenctions/models.png" alt="Overlay Image 3" />
-        <img src="/otherSenctions/modelsfemales.png" alt="Overlay Image 4" />
-      </div> */}
+      <img
+        src="https://cdn.discordapp.com/attachments/1056419450473152533/1109414200226353153/Neilyo77_Create_an_image_for_the_News_section_of_our_jewelry_we_6d095b1c-d2db-4bd3-b556-062a57f147af.png"
+        alt=""
+      />
     </section>
   );
 };
