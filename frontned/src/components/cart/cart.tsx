@@ -2,6 +2,7 @@ import { HiXMark } from "react-icons/hi2";
 import styles from "./styles.module.scss";
 import { useCart } from "./useCart";
 import { formatPriceToEuro } from "../../config";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { handlers, values } = useCart();
@@ -21,7 +22,7 @@ const Cart = () => {
           <div className={styles.keepbrowsing}>
             <img
               className={styles.emptycartimg}
-              src={"/public/otherSenctions/emptycart.png"}
+              src={"../../assets/emptycart.png"}
               alt="empty_cart"
             />
             <button
@@ -55,14 +56,14 @@ const Cart = () => {
                       <div className={styles.itemactions}>
                         <span
                           className={styles.minus}
-                          // onClick={handlers.decrement}
+                          onClick={() => handlers.decrement(item.id)}
                         >
                           -
                         </span>
                         <span className={styles.poso}>{item.quantity}</span>
                         <span
                           className={styles.plus}
-                          // onClick={handlers.increment}
+                          onClick={() => handlers.increment(item.id)}
                         >
                           +
                         </span>
@@ -83,7 +84,9 @@ const Cart = () => {
                   {formatPriceToEuro(values.cart.sum)}
                 </span>
               </div>
-              <button className={styles.checkoutbtn}>CHECKOUT</button>
+              <Link style={{ all: "unset" }} to={"/checkout"}>
+                <button className={styles.checkoutbtn}>CHECKOUT</button>
+              </Link>
             </div>
           </>
         )}

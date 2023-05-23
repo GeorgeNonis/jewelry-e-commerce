@@ -1,6 +1,10 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import * as Comp from "./components";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+
+const stripePromise = loadStripe("YOUR_STRIPE_PUBLISHABLE_KEY");
 
 const RootLayout = lazy(() => import("./pages/rootLayout/rootLayout"));
 const Error = lazy(() => import("./components/errors/errorReacRouter"));
@@ -16,6 +20,8 @@ const FAQ = lazy(() => import("./pages/faq"));
 const News = lazy(() => import("./pages/news"));
 const StoreLocation = lazy(() => import("./pages/storeLocationPage"));
 const Contact = lazy(() => import("./pages/contactUsPage"));
+const DummyStripeForm = lazy(() => import("./components/stripe/stripe"));
+const Thankyou = lazy(() => import("./pages/thankYouPage/thankYouPage"));
 
 const router = createBrowserRouter([
   {
@@ -75,6 +81,7 @@ const router = createBrowserRouter([
           </Suspense>
         ),
       },
+
       {
         path: "categories",
         element: (
@@ -102,6 +109,26 @@ const router = createBrowserRouter([
         ),
       },
     ],
+  },
+  {
+    path: "/checkout",
+    element: (
+      <Suspense fallback={<Comp.LoadingSpinner />}>
+        <Elements stripe={stripePromise}>
+          <DummyStripeForm />
+        </Elements>
+      </Suspense>
+    ),
+  },
+  {
+    path: "/checkout/order-received",
+    element: (
+      <Suspense fallback={<Comp.LoadingSpinner />}>
+        <Elements stripe={stripePromise}>
+          <Thankyou />
+        </Elements>
+      </Suspense>
+    ),
   },
 
   {

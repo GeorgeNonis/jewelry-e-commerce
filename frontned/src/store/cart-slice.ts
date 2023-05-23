@@ -49,9 +49,42 @@ const cart = createSlice({
       console.log(id);
       state.cart.items = [...state.cart.items.filter((i) => i.id !== id)];
     },
+    increaseItem(state, { payload }) {
+      const { id } = payload;
+      const item = state.cart.items.find((i) => i.id == id);
+
+      item!.quantity += 1;
+      item!.total += item!.price;
+
+      state.cart.quantity += 1;
+      state.cart.sum += item!.price;
+    },
+    decreasetItem(state, { payload }) {
+      const { id } = payload;
+      const item = state.cart.items.find((i) => i.id == id);
+
+      item!.quantity -= 1;
+      item!.total -= item!.price;
+
+      state.cart.quantity -= 1;
+      state.cart.sum -= item!.price;
+    },
+    clearCart(state) {
+      state.cart.items = [];
+      state.cart.quantity = 0;
+      state.cart.sum = 0;
+    },
   },
 });
 
-export const { cartState, burgerState, addItem, removeItem } = cart.actions;
+export const {
+  cartState,
+  burgerState,
+  addItem,
+  removeItem,
+  increaseItem,
+  decreasetItem,
+  clearCart,
+} = cart.actions;
 
 export default cart.reducer;

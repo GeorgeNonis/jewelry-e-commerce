@@ -1,0 +1,58 @@
+// styles.module.scss
+
+.trackingContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.trackingTitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.trackingId {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.trackingIdLabel {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.trackingIdValue {
+  font-weight: bold;
+}
+
+.checkpoints {
+  display: flex;
+  align-items: center;
+}
+
+.checkpoint {
+  display: flex;
+  align-items: center;
+}
+
+.checkpointIcon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #5e9cd3;
+}
+
+.checkpointText {
+  font-size: 16px;
+}
+
+.dottedLine {
+  flex: 1;
+  border-top: 1px dotted #ccc;
+}

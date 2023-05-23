@@ -5,6 +5,7 @@ import { allCategories } from "../../../config";
 import styles from "./styles.module.scss";
 import { useNavbar } from "./useNavbar";
 import MobileMenu from "./mobileMenu/mobileMenu";
+import CartQuantity from "./cartQuantity/cartQuantity";
 
 const Navbar = () => {
   const {
@@ -35,14 +36,17 @@ const Navbar = () => {
           >
             <h3>Products Page</h3>
           </Link>
-          <div className={styles.cartQuantity}>
-            <span className={styles.cartSpan}>{cart.quantity}</span>
-            <BsFillCartFill onClick={cartHandler} />
-          </div>
+          <CartQuantity
+            cartHandler={cartHandler}
+            cartQuantity={cart.quantity}
+          />
         </div>
         {<MobileMenu handler={burgerHandler} crt={burgerState} />}
         <div className={styles.phone} onClick={burgerHandler}>
-          <BsFillCartFill />
+          <CartQuantity
+            cartHandler={cartHandler}
+            cartQuantity={cart.quantity}
+          />
           <RxHamburgerMenu />
         </div>
       </div>
