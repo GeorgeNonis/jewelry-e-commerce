@@ -3,6 +3,7 @@ import { BsTelephoneOutbound } from "react-icons/bs";
 import { GenericObj } from "./pages/contactUsPage/options/interfaces";
 
 export const LOCATION_API = import.meta.env.GOOGLE_API;
+export const STRIPE_KEY = import.meta.env.STRIPE_KEY;
 export const coordinations = { lat: 56.162937, lng: 10.203921 };
 
 export const footerLinks = [

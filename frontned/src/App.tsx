@@ -3,8 +3,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import * as Comp from "./components";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import { STRIPE_KEY } from "./config";
 
-const stripePromise = loadStripe("YOUR_STRIPE_PUBLISHABLE_KEY");
+const stripePromise = loadStripe(`${STRIPE_KEY}`);
 
 const RootLayout = lazy(() => import("./pages/rootLayout/rootLayout"));
 const Error = lazy(() => import("./components/errors/errorReacRouter"));
@@ -119,6 +120,18 @@ const router = createBrowserRouter([
         </Elements>
       </Suspense>
     ),
+    // children: [
+    //   {
+    //     path: "order-received",
+    //     element: (
+    //       <Suspense fallback={<Comp.LoadingSpinner />}>
+    //         <Elements stripe={stripePromise}>
+    //           <Thankyou />
+    //         </Elements>
+    //       </Suspense>
+    //     ),
+    //   },
+    // ],
   },
   {
     path: "/checkout/order-received",

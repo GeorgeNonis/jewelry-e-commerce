@@ -1,20 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { cartState, clearCart } from "../../store/cart-slice";
+import { useLocation, useNavigate, redirect } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { invoice } from "../../store/cart-slice";
+import { IRootState } from "../../store/store";
 
 export const useStripHook = () => {
+  const { purchaseState } = useSelector((state: IRootState) => state.cart);
+  const navigate = useNavigate();
+  const loc = useLocation();
   const dispatch = useDispatch();
   const stripe = useStripe();
   const elements = useElements();
-  const navigate = useNavigate();
-
-  const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [complete, setComplete] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [location, setLocation] = useState("");
+
+  useEffect(() => {
+    const checkoutUrl = loc.pathname.split("/")[1];
+    if (checkoutUrl === "checkout") {
+      !purchaseState && navigate("/");
+    }
+  }, [loc, purchaseState, navigate]);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -30,20 +38,19 @@ export const useStripHook = () => {
 
     // Simulate a successful payment
     // setPaymentSuccess(true);
+    dispatch(invoice());
+    navigate("/checkout/order-received");
   };
 
   // Redirect to the homepage after successful payment
-  if (complete) {
-    dispatch(cartState());
-    navigate("/checkout/order-received");
-    // dispatch(clearCart());
-  }
+  // dispatch(clearCart());
+  // if (complete) {
+  // }
 
   const values = {
     firstName,
     email,
     location,
-    paymentSuccess,
   };
 
   const handlers = {

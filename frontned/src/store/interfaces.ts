@@ -18,6 +18,8 @@ export interface InitialState {
   cartState: boolean;
   burgerMenu: boolean;
   notifcation: boolean;
+  purchaseState: boolean;
+  invoiceState: boolean;
   cart: {
     quantity: number;
     items: Product[];

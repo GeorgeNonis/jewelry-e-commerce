@@ -84,9 +84,12 @@ const Cart = () => {
                   {formatPriceToEuro(values.cart.sum)}
                 </span>
               </div>
-              <Link className={styles.checkoutbtn} to={"/checkout"}>
+              <Link
+                className={styles.checkoutbtn}
+                to={"/checkout"}
+                onClick={handlers.checkOutHandler}
+              >
                 CHECKOUT
-                {/* <button className={styles.checkoutbtn}>CHECKOUT</button> */}
               </Link>
             </div>
           </>

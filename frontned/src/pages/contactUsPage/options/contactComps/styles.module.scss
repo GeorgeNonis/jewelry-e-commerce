@@ -1,6 +1,39 @@
+@import "../../../../styles/mixins.module.scss";
+
+@media (max-width: 599px) {
+  .contactactiondiv {
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+}
+@media (max-width: 450px) {
+  .contactactiondiv {
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+}
+@media (min-width: 599px) {
+  .contactactiondiv {
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .contactactiondiv {
+    grid-template-rows: unset;
+    grid-template-columns: 1fr 3fr 2fr;
+  }
+}
+@media (min-width: 2400px) {
+  .contactactiondiv {
+    grid-template-rows: unset;
+    grid-template-columns: 1fr 3fr 2fr;
+  }
+}
+
 .contactactiondiv {
   display: grid;
-  grid-template-columns: 1fr 3fr 2fr;
+  // grid-template-columns: 1fr 3fr 2fr;
   place-items: center;
   width: 100%;
   border-bottom: 1px solid black;

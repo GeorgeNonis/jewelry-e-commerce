@@ -2,6 +2,7 @@ import { formatPriceToEuro } from "../../config";
 import { useProductPage } from "./useProductPage";
 import { LoadingSpinner, TrendingNow } from "../../components";
 import styles from "./styles.module.scss";
+import { Link } from "react-router-dom";
 
 const ProductPage = () => {
   const { values, handlers } = useProductPage();
@@ -40,7 +41,14 @@ const ProductPage = () => {
                 "ADD TO CART"
               )}
             </button>
-            <button className={styles.buyNow}>BUY NOW</button>
+            <Link
+              className={styles.buyNow}
+              to={"/checkout"}
+              onClick={handlers.checkOutHandler}
+            >
+              BUY NOW
+            </Link>
+            {/* <button className={styles.buyNow} onClick={handlers.checkOutHandler}>BUY NOW</button> */}
           </div>
         </div>
         <div className={styles.productstats}>

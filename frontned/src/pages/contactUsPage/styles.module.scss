@@ -17,12 +17,15 @@
 }
 @media (min-width: 1200px) {
   .contactUsPage {
-    width: 70%;
+    width: 50%;
+  }
+  .contactusdiv {
+    width: 100%;
   }
 }
 @media (min-width: 1441px) {
   .contactUsPage {
-    width: 70%;
+    width: 50%;
   }
 }
 
@@ -39,7 +42,6 @@
   }
   .contactusdiv {
     background-color: rgb(237, 237, 237);
-    width: 80%;
 
     margin-inline: auto;
     padding: 2rem;

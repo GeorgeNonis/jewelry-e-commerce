@@ -5,6 +5,8 @@ const initialState = {
   cartState: false,
   burgerMenu: false,
   notifcation: false,
+  purchaseState: false,
+  invoiceState: false,
   cart: {
     quantity: 0,
     items: [],
@@ -18,10 +20,22 @@ const cart = createSlice({
   reducers: {
     cartState(state) {
       state.cartState = !state.cartState;
-      console.log("cartState");
     },
     burgerState(state) {
       state.cartState = !state.cartState;
+    },
+    buynow(state, { payload }) {
+      const { quantity, item } = payload;
+      const sum = quantity * item.price;
+      state.cart.items = [
+        {
+          ...item,
+          quantity,
+          total: item.price * quantity,
+        },
+      ];
+      state.cart.quantity = quantity;
+      state.cart.sum = sum;
     },
     addItem(state, { payload }) {
       const { id, quantity, item } = payload;
@@ -49,6 +63,10 @@ const cart = createSlice({
       state.cart.sum -= item?.total ?? 0;
       console.log(id);
       state.cart.items = [...state.cart.items.filter((i) => i.id !== id)];
+
+      if (state.cart.quantity === 0) {
+        state.purchaseState = false;
+      }
     },
     increaseItem(state, { payload }) {
       const { id } = payload;
@@ -74,6 +92,16 @@ const cart = createSlice({
       state.cart.items = [];
       state.cart.quantity = 0;
       state.cart.sum = 0;
+      state.invoiceState = !state.invoiceState;
+      state.cartState = false;
+    },
+    purchase(state) {
+      state.purchaseState = !state.purchaseState;
+    },
+    invoice(state) {
+      state.cartState = !state.cartState;
+      state.purchaseState = !state.purchaseState;
+      state.invoiceState = !state.invoiceState;
     },
   },
 });
@@ -86,6 +114,9 @@ export const {
   increaseItem,
   decreasetItem,
   clearCart,
+  purchase,
+  invoice,
+  buynow,
 } = cart.actions;
 
 export default cart.reducer;

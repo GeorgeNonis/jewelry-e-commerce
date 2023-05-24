@@ -48,9 +48,7 @@ const DummyStripeForm = () => {
             onChange={(e) => handlers.setComplete(e.complete)}
           />
         </div>
-        {values.paymentSuccess && (
-          <div className={styles["success-message"]}>Payment successful!</div>
-        )}
+
         <button type="submit">Pay</button>
       </form>
     </div>

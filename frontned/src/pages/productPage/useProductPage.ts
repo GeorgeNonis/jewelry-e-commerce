@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { allCategories } from "../../config";
 import { useDispatch } from "react-redux";
-import { addItem } from "../../store/cart-slice";
+import { addItem, buynow, purchase } from "../../store/cart-slice";
 
 export const useProductPage = () => {
   const [quantity, setQuantity] = useState(1);
@@ -34,6 +34,11 @@ export const useProductPage = () => {
     setQuantity((prev) => (prev -= 1));
   };
 
+  const checkOutHandler = () => {
+    dispatch(buynow({ quantity, item: { ...product } }));
+    dispatch(purchase());
+  };
+
   const values = {
     product,
     quantity,
@@ -44,6 +49,7 @@ export const useProductPage = () => {
     increment,
     decrement,
     additemtocart,
+    checkOutHandler,
   };
   return {
     values,

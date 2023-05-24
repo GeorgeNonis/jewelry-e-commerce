@@ -4,6 +4,7 @@ import {
   cartState,
   decreasetItem,
   increaseItem,
+  purchase,
   removeItem,
 } from "../../store/cart-slice";
 
@@ -29,6 +30,10 @@ export const useCart = () => {
   const decrement = (id: number) => {
     dispatch(decreasetItem({ id }));
   };
+
+  const checkOutHandler = () => {
+    dispatch(purchase());
+  };
   const values = {
     state,
     cart,
@@ -39,6 +44,7 @@ export const useCart = () => {
     removeItemHandler,
     increment,
     decrement,
+    checkOutHandler,
   };
   return {
     values,

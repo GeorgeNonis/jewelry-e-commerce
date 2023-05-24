@@ -15,7 +15,7 @@ export const useScrollToTop = () => {
       if (window.scrollY > 20) {
         setVisibility(true);
       } else {
-        console.log(window.scrollY);
+        // console.log(window.scrollY);
         setVisibility(false);
       }
     };
