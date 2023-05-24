@@ -14,12 +14,9 @@ const ThankYouPage = () => {
             have any questions or need further assistance, please don't hesitate
             to contact us.
           </p>
-          {/* <Link
-          to={"/"}
-          style={{ all: "unset", cursor: "pointer" }}
-        >
-          <button className={styles.button}>Go to Homepage</button>
-        </Link> */}
+          <Link to={"/"}>
+            <button className={styles.button}>Go to Homepage</button>
+          </Link>
         </div>
         <TrackingComponent />
         <Order />

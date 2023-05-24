@@ -45,6 +45,7 @@ const DummyStripeForm = () => {
             id="cardDetails"
             className={styles["StripeElement"]}
             options={{ style: { base: { fontSize: "16px" } } }}
+            onChange={(e) => handlers.setComplete(e.complete)}
           />
         </div>
         {values.paymentSuccess && (

@@ -1,9 +1,83 @@
-// styles.module.scss
+@import "../../../styles/mixins.module.scss";
+
+@media (max-width: 599px) {
+  .trackingContainer {
+    width: 90%;
+  }
+
+  .checkpoints {
+    // margin-top: 2rem;
+    display: grid;
+    place-items: center;
+    grid-gap: 3rem;
+    .dottedLine {
+      transform: rotate(90deg);
+      width: 20%;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .trackingContainer {
+    width: 90%;
+  }
+
+  .checkpoints {
+    display: grid;
+    place-items: center;
+    grid-gap: 3rem;
+    .dottedLine {
+      transform: rotate(90deg);
+      width: 20%;
+    }
+  }
+}
+@media (min-width: 599px) {
+  .trackingContainer {
+    width: 90%;
+  }
+
+  .checkpoints {
+    display: grid;
+    place-items: center;
+    grid-gap: 3rem;
+    .dottedLine {
+      transform: rotate(90deg);
+      width: 20%;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .trackingContainer {
+    width: 50%;
+  }
+
+  .checkpoints {
+    display: flex;
+    .dottedLine {
+      width: unset;
+      transform: unset;
+    }
+  }
+}
+@media (min-width: 2400px) {
+  .trackingContainer {
+    width: 50%;
+  }
+
+  .checkpoints {
+    display: flex;
+    .dottedLine {
+      width: unset;
+      transform: unset;
+    }
+  }
+}
 
 .trackingContainer {
-  max-width: 600px;
+  // max-width: 600px;
   margin: 20px auto;
   padding: 20px;
+  margin-top: 1rem;
   background-color: #f7f7f7;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -15,9 +89,10 @@
 }
 
 .trackingId {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  margin-block: 2rem;
 }
 
 .trackingIdLabel {
@@ -30,7 +105,7 @@
 }
 
 .checkpoints {
-  display: flex;
+  // display: flex;
   align-items: center;
 }
 

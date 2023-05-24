@@ -1,9 +1,6 @@
-// TrackingComponent.tsx
-
-import React from "react";
 import styles from "./styles.module.scss";
 
-const TrackingComponent: React.FC = () => {
+const TrackingComponent = () => {
   return (
     <div className={styles.trackingContainer}>
       <h2 className={styles.trackingTitle}>Order Tracking</h2>

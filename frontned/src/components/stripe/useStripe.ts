@@ -11,6 +11,7 @@ export const useStripHook = () => {
   const navigate = useNavigate();
 
   const [paymentSuccess, setPaymentSuccess] = useState(false);
+  const [complete, setComplete] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [location, setLocation] = useState("");
@@ -28,14 +29,14 @@ export const useStripHook = () => {
     }
 
     // Simulate a successful payment
-    setPaymentSuccess(true);
+    // setPaymentSuccess(true);
   };
 
   // Redirect to the homepage after successful payment
-  if (paymentSuccess) {
+  if (complete) {
     dispatch(cartState());
-    // dispatch(clearCart());
     navigate("/checkout/order-received");
+    // dispatch(clearCart());
   }
 
   const values = {
@@ -49,6 +50,7 @@ export const useStripHook = () => {
     setFirstName,
     setEmail,
     setLocation,
+    setComplete,
     handleSubmit,
   };
 

@@ -1,8 +1,8 @@
 import { HiXMark } from "react-icons/hi2";
-import styles from "./styles.module.scss";
 import { useCart } from "./useCart";
 import { formatPriceToEuro } from "../../config";
 import { Link } from "react-router-dom";
+import styles from "./styles.module.scss";
 
 const Cart = () => {
   const { handlers, values } = useCart();
@@ -84,8 +84,9 @@ const Cart = () => {
                   {formatPriceToEuro(values.cart.sum)}
                 </span>
               </div>
-              <Link style={{ all: "unset" }} to={"/checkout"}>
-                <button className={styles.checkoutbtn}>CHECKOUT</button>
+              <Link className={styles.checkoutbtn} to={"/checkout"}>
+                CHECKOUT
+                {/* <button className={styles.checkoutbtn}>CHECKOUT</button> */}
               </Link>
             </div>
           </>

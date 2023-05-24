@@ -97,17 +97,30 @@
     button[type="submit"] {
       margin-top: 20px;
       padding: 10px 20px;
-      border: none;
+      border: 1px solid black;
       border-radius: 4px;
-      background-color: #5e9cd3;
-      color: #fff;
+      background-color: white;
+      color: black;
       font-size: 16px;
       font-weight: bold;
+      font-family: "Montserrat";
       cursor: pointer;
-      transition: background-color 0.3s ease-in-out;
-
-      &:hover {
-        background-color: #4c8aba;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: black;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
       }
     }
   }

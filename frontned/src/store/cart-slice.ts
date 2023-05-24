@@ -18,6 +18,7 @@ const cart = createSlice({
   reducers: {
     cartState(state) {
       state.cartState = !state.cartState;
+      console.log("cartState");
     },
     burgerState(state) {
       state.cartState = !state.cartState;

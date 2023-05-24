@@ -40,13 +40,10 @@ const Order = () => {
           </div>
           <div className={styles.total}>
             <h1>TOTAL</h1>
-            <h1>{values.cart.sum}</h1>
+            <h1>{formatPriceToEuro(values.cart.sum)}</h1>
           </div>
         </div>
       </div>
-      <Link to={"/"} className={styles.link}>
-        <button className={styles.button}>Go to Homepage</button>
-      </Link>
     </div>
   );
 };

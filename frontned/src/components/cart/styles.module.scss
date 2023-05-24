@@ -1,3 +1,61 @@
+@import "../../styles/mixins.module.scss";
+
+@media (max-width: 599px) {
+  .backdrop {
+    width: 0;
+  }
+
+  .cart {
+    width: 100dvw;
+  }
+}
+@media (max-width: 450px) {
+  .backdrop {
+    width: 0;
+  }
+
+  .cart {
+    width: 100dvw;
+  }
+
+  // .backdrop {
+  //   width: 50dvw;
+  //   height: 100dvh;
+  //   background-color: #00000063;
+  // }
+
+  // .cart {
+  //   width: 50dvw;
+  //   height: 100dvh;
+  //   background-color: white;
+}
+@media (min-width: 599px) {
+  .backdrop {
+    width: 30dvw;
+  }
+
+  .cart {
+    width: 70dvw;
+  }
+}
+@media (min-width: 1200px) {
+  .backdrop {
+    width: 50dvw;
+  }
+
+  .cart {
+    width: 50dvw;
+  }
+}
+@media (min-width: 2400px) {
+  .backdrop {
+    width: 70dvw;
+  }
+
+  .cart {
+    width: 30dvw;
+  }
+}
 .xMark {
   position: absolute;
   top: 1rem;
@@ -60,13 +118,13 @@
 }
 
 .backdrop {
-  width: 50dvw;
+  // width: 50dvw;
   height: 100dvh;
   background-color: #00000063;
 }
 
 .cart {
-  width: 50dvw;
+  // width: 50dvw;
   height: 100dvh;
   background-color: white;
 
@@ -87,6 +145,7 @@
     }
 
     .checkoutbtn {
+      all: unset;
       border: 2px solid black;
       padding: 0.5rem 2rem;
       font-size: 1rem;
@@ -95,6 +154,24 @@
       width: 10rem;
       place-self: center;
       font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: black;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
     }
     // hr {
     //   border: none;
@@ -249,4 +326,8 @@
 .subtotalprice {
   font-size: 1rem;
   font-weight: 700;
+}
+.checkoutlink {
+  all: unset;
+  cursor: pointer;
 }
