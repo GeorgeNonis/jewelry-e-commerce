@@ -8,7 +8,7 @@ const Footer = () => {
       <div
         className={styles.container}
         onMouseEnter={() => {
-          console.log(window.scrollY);
+          // console.log(window.scrollY);
         }}
       >
         {footerLinks.map((link, i) => {

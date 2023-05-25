@@ -13,7 +13,7 @@ export const useThankyou = () => {
 
   useEffect(() => {
     const url = location.pathname.split("/")[2];
-    console.log(url);
+    // console.log(url);
     if (url === "order-received") {
       !invoiceState && navigate("/");
     }

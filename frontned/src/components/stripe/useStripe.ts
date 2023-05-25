@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import { useLocation, useNavigate, redirect } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { invoice } from "../../store/cart-slice";
 import { IRootState } from "../../store/store";
@@ -16,7 +16,7 @@ export const useStripHook = () => {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [location, setLocation] = useState("");
-
+  complete;
   useEffect(() => {
     const checkoutUrl = loc.pathname.split("/")[1];
     if (checkoutUrl === "checkout") {

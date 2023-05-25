@@ -36,7 +36,7 @@ export const useProductPage = () => {
 
   const checkOutHandler = () => {
     dispatch(buynow({ quantity, item: { ...product } }));
-    dispatch(purchase());
+    dispatch(purchase({ bln: true }));
   };
 
   const values = {

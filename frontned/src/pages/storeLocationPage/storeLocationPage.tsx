@@ -9,7 +9,7 @@ export default function Home() {
   });
 
   if (!isLoaded) return <div>Loading...</div>;
-  console.log("puto");
+  // console.log("puto");
 
   return (
     <div className={styles.storeLocationPage}>

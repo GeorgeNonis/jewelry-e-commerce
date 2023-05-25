@@ -4,6 +4,8 @@ import { GenericObj } from "./pages/contactUsPage/options/interfaces";
 
 export const LOCATION_API = import.meta.env.GOOGLE_API;
 export const STRIPE_KEY = import.meta.env.STRIPE_KEY;
+// export const STRIPE_KEY =
+//   "sk_test_51NBLn1BXiUmf4FHN6EaJadEmhiPpIklUqMaMZiWj7XV1hlbkBn2ntOv7GvPBWWV57HvL9WS2eyypJttqQIA17Tgz000I4oKXgf";
 export const coordinations = { lat: 56.162937, lng: 10.203921 };
 
 export const footerLinks = [

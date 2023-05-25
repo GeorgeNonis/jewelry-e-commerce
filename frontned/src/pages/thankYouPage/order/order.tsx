@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { formatPriceToEuro } from "../../../config";
 import styles from "./styles.module.scss";
 import { useOrder } from "./useOrder";

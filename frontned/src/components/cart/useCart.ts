@@ -19,7 +19,7 @@ export const useCart = () => {
   };
 
   const removeItemHandler = (id: number) => {
-    console.log(id);
+    // console.log(id);
     dispatch(removeItem({ id }));
   };
 
@@ -32,7 +32,7 @@ export const useCart = () => {
   };
 
   const checkOutHandler = () => {
-    dispatch(purchase());
+    dispatch(purchase({ bln: true }));
   };
   const values = {
     state,

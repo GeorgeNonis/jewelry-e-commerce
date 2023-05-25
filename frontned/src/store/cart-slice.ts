@@ -39,7 +39,7 @@ const cart = createSlice({
     },
     addItem(state, { payload }) {
       const { id, quantity, item } = payload;
-      console.log({ id, quantity, item });
+      // console.log({ id, quantity, item });
       const doesItemExist = state.cart.items.find((i) => i.id == id);
       const sum = quantity * item.price;
       state.cart.sum += sum;
@@ -61,7 +61,7 @@ const cart = createSlice({
       const item = state.cart.items.find((i) => i.id == id);
       state.cart.quantity -= item?.quantity ?? 0;
       state.cart.sum -= item?.total ?? 0;
-      console.log(id);
+      // console.log(id);
       state.cart.items = [...state.cart.items.filter((i) => i.id !== id)];
 
       if (state.cart.quantity === 0) {
@@ -95,12 +95,13 @@ const cart = createSlice({
       state.invoiceState = !state.invoiceState;
       state.cartState = false;
     },
-    purchase(state) {
-      state.purchaseState = !state.purchaseState;
+    purchase(state, { payload }) {
+      const { bln } = payload;
+      state.purchaseState = bln;
     },
     invoice(state) {
       state.cartState = !state.cartState;
-      state.purchaseState = !state.purchaseState;
+      state.purchaseState = false;
       state.invoiceState = !state.invoiceState;
     },
   },

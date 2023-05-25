@@ -120,18 +120,6 @@ const router = createBrowserRouter([
         </Elements>
       </Suspense>
     ),
-    // children: [
-    //   {
-    //     path: "order-received",
-    //     element: (
-    //       <Suspense fallback={<Comp.LoadingSpinner />}>
-    //         <Elements stripe={stripePromise}>
-    //           <Thankyou />
-    //         </Elements>
-    //       </Suspense>
-    //     ),
-    //   },
-    // ],
   },
   {
     path: "/checkout/order-received",

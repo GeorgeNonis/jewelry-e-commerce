@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { BsFillCartFill } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { allCategories } from "../../../config";
 import styles from "./styles.module.scss";

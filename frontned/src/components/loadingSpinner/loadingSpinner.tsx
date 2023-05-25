@@ -5,7 +5,7 @@ interface LoadingSpinnerProps {
 }
 
 const LoadingSpinner = ({ height }: LoadingSpinnerProps) => {
-  console.log(height);
+  // console.log(height);
   return (
     <div
       className={styles.loadingSpinner}
