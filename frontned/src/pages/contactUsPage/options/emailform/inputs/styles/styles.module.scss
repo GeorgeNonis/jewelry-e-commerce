@@ -1,0 +1,59 @@
+.formdiv {
+  display: grid;
+  gap: 1rem;
+  margin-block: 2rem;
+}
+
+.inputdiv {
+  position: relative;
+  .input {
+    width: 100%;
+    padding: 2rem 1rem 0.5rem 1rem;
+    background: white;
+    color: black;
+  }
+}
+
+.inputname {
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+  font-weight: 100;
+  font-size: 0.8rem;
+  margin-top: 0;
+}
+
+.countrydiv {
+  position: relative;
+  select {
+    width: 100%;
+    background: white;
+    color: black;
+    padding: 2rem 1rem 0.5rem 1rem;
+    border: 2px solid black;
+  }
+  .countryname {
+    position: absolute;
+    left: 1rem;
+    top: 0.5rem;
+    font-weight: 100;
+    font-size: 0.8rem;
+    margin-top: 0;
+  }
+}
+
+.textarea {
+  background: white;
+  color: black;
+  width: 100%;
+  height: 10rem;
+  padding: 1rem;
+  resize: none;
+  margin-top: 2rem;
+}
+
+.limit {
+  margin-top: 2rem;
+  text-align: start;
+  font-weight: 300;
+}

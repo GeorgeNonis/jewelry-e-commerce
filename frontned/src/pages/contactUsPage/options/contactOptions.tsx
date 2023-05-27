@@ -2,9 +2,10 @@ import { TfiEmail } from "react-icons/tfi";
 import { BsTelephoneOutbound } from "react-icons/bs";
 import { useContactUsPageObj } from "./interfaces";
 import { contactOptions } from "../../../config";
-import styles from "../styles.module.scss";
 import ContactAction from "./contactComps/contactaction";
 import { useContactOptions } from "./useContactOptions";
+import Emailform from "./emailform";
+import styles from "../styles.module.scss";
 
 const ContactOptions = ({ ...rest }: useContactUsPageObj) => {
   const { ...values } = useContactOptions();
@@ -36,6 +37,7 @@ const ContactOptions = ({ ...rest }: useContactUsPageObj) => {
             </h3>
             <div className={styles.contactoptions}>
               <ContactAction {...options.email} handler={values.callHandler} />
+              <Emailform />
               <ContactAction
                 {...options.telephone}
                 handler={values.callHandler}

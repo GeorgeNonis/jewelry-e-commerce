@@ -1,0 +1,25 @@
+.PhoneInput {
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  border-width: 2px;
+  border-style: inset;
+  border-image: initial;
+  background: white;
+  border: 2px solid black;
+  padding: 0 0 0 1rem;
+}
+
+.PhoneInputInput {
+  width: 100%;
+  padding: 2rem 1rem 0.5rem 1rem;
+  background: white;
+  color: black;
+  border: none;
+  outline: none;
+}
+
+.PhoneInputCountry {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

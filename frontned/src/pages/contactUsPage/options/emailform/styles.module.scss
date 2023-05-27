@@ -1,0 +1,64 @@
+.mainContent {
+  display: grid;
+  border-bottom: 1px solid black;
+  padding-bottom: 4rem;
+}
+
+.checkBoxes {
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  input[type="radio"] {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: 0 0 0 1px black;
+    border: 0.2rem solid #fff;
+    background-color: white;
+    border-radius: 50%;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-right: 0.5rem;
+  }
+  input[type="radio"]:checked {
+    box-shadow: 0 0 0 1px black;
+    background-color: black;
+    border-width: 0.2rem;
+  }
+  div {
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+  }
+}
+
+.sumbitform {
+  all: unset;
+  background: black;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  font-size: 1rem;
+  font-family: "Montserrat";
+  width: 85%;
+  margin-inline: auto;
+  margin-top: 3rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}

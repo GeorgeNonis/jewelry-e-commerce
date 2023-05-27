@@ -19,9 +19,12 @@ const TopicOptions = ({ ...rest }: useContactUsPageObj) => {
         onClick={rest.inputHandler}
         ref={rest.topicRef}
       >
-        {rest.option && <h4>Please select your topic *</h4>}
+        {rest.option && (
+          <h4 className={styles.h4}>Please select your topic *</h4>
+        )}
         {!rest.inputState ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}
         <input
+          className={styles.input}
           type="text"
           readOnly
           placeholder="Please select your topic *"

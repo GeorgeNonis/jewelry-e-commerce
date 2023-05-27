@@ -42,9 +42,9 @@
   }
   .contactusdiv {
     background-color: rgb(237, 237, 237);
-
     margin-inline: auto;
     padding: 2rem;
+    width: 100%;
     h3 {
       font-size: 1rem;
       font-family: "Montserrat";
@@ -78,14 +78,14 @@
 
   .topicinput {
     position: relative;
-    h4 {
+    .h4 {
       position: absolute;
       left: 1rem;
       top: 0.5rem;
       font-weight: 100;
       font-size: 0.8rem;
     }
-    input {
+    .input[type="text"] {
       width: 100%;
       background-color: white;
       padding: 2rem 1rem 1rem 1rem;

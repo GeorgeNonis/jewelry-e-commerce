@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import * as Comp from "./components";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import { STRIPE_KEY } from "./config";
+import { SECRET_KEY, STRIPE_KEY } from "./config";
 
 const stripePromise = loadStripe(`${STRIPE_KEY}`);
 
@@ -125,9 +125,7 @@ const router = createBrowserRouter([
     path: "/checkout/order-received",
     element: (
       <Suspense fallback={<Comp.LoadingSpinner />}>
-        <Elements stripe={stripePromise}>
-          <Thankyou />
-        </Elements>
+        <Thankyou />
       </Suspense>
     ),
   },

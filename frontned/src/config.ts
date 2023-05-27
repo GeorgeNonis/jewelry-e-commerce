@@ -2,8 +2,9 @@ import { TfiEmail } from "react-icons/tfi";
 import { BsTelephoneOutbound } from "react-icons/bs";
 import { GenericObj } from "./pages/contactUsPage/options/interfaces";
 
-export const LOCATION_API = import.meta.env.GOOGLE_API;
-export const STRIPE_KEY = import.meta.env.STRIPE_KEY;
+export const LOCATION_API = import.meta.env.VITE_GOOGLE_API;
+export const STRIPE_KEY = import.meta.env.VITE_STRIPE_KEY;
+export const SECRET_KEY = import.meta.env.VITE_SECRET_KEY;
 // export const STRIPE_KEY =
 //   "sk_test_51NBLn1BXiUmf4FHN6EaJadEmhiPpIklUqMaMZiWj7XV1hlbkBn2ntOv7GvPBWWV57HvL9WS2eyypJttqQIA17Tgz000I4oKXgf";
 export const coordinations = { lat: 56.162937, lng: 10.203921 };
@@ -477,3 +478,21 @@ export const contactOptions = {
     time: "2-5 minutes",
   },
 };
+
+export const formInputs = [
+  {
+    name: "First name",
+    value: "firstName",
+    type: "text",
+  },
+  {
+    name: "Last name",
+    value: "lastName",
+    type: "text",
+  },
+  {
+    name: "Email",
+    value: "email",
+    type: "email",
+  },
+];

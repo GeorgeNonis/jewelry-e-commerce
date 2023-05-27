@@ -25,9 +25,14 @@ const SubjectOptions = ({ ...rest }: useContactUsPageObj) => {
           onClick={rest.subjectHandler}
           ref={rest.subjectRef}
         >
-          {rest.option && <h4>Select one of the following subjects *</h4>}
+          {rest.option && (
+            <h4 className={styles.h4}>
+              Select one of the following subjects *
+            </h4>
+          )}
           {!rest.inputState ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}
           <input
+            className={styles.input}
             type="text"
             readOnly
             placeholder="Select one of the following subjects *"

@@ -36,16 +36,9 @@ export const useStripHook = () => {
       return;
     }
 
-    // Simulate a successful payment
-    // setPaymentSuccess(true);
     dispatch(invoice());
     navigate("/checkout/order-received");
   };
-
-  // Redirect to the homepage after successful payment
-  // dispatch(clearCart());
-  // if (complete) {
-  // }
 
   const values = {
     firstName,
