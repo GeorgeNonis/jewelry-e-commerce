@@ -179,3 +179,9 @@
 .customerLoc {
   padding-top: 1rem;
 }
+
+.emailinfo {
+  overflow: hidden;
+  height: 0;
+  transition: height ease-in-out 250ms;
+}

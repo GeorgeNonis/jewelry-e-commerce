@@ -4,9 +4,9 @@ import { CartQuantityProps } from "./interfaces";
 
 const CartQuantity = ({ cartHandler, cartQuantity }: CartQuantityProps) => {
   return (
-    <div className={styles.cartQuantity}>
+    <div className={styles.cartQuantity} onClick={cartHandler}>
       <span className={styles.cartSpan}>{cartQuantity}</span>
-      <BsFillCartFill onClick={cartHandler} />
+      <BsFillCartFill />
     </div>
   );
 };

@@ -1,8 +1,7 @@
-import { useTextarea } from "../../useTextarea";
+import { FormProps } from "../interfaces";
 import styles from "../styles/styles.module.scss";
 
-const TextArea = () => {
-  const { setValue, values } = useTextarea();
+const TextArea = ({ handlers, values }: FormProps) => {
   return (
     <div>
       <textarea
@@ -11,7 +10,7 @@ const TextArea = () => {
         id="msg"
         placeholder="Message"
         onChange={(e) => {
-          setValue(e.target.value);
+          handlers.setValue(e.target.value);
         }}
         maxLength={values.limit}
       ></textarea>

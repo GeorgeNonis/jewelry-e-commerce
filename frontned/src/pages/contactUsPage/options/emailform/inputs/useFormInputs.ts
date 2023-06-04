@@ -2,24 +2,24 @@ import { useState } from "react";
 import { FormData } from "./interfaces";
 
 export const useFormInputs = () => {
-  const [data, setData] = useState<FormData>({
+  const [formdata, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
+    email: "",
   });
 
-  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeFormHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    console.log({ name, value });
-    setData((prev) => {
+    setFormData((prev) => {
       return { ...prev, [name]: value };
     });
   };
 
   const values = {
-    data,
+    formdata,
   };
   const handlers = {
-    onChangeHandler,
+    onChangeFormHandler,
   };
   return { values, handlers };
 };

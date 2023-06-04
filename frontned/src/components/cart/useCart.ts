@@ -9,7 +9,7 @@ import {
 } from "../../store/cart-slice";
 
 export const useCart = () => {
-  const { cartState: state, cart } = useSelector(
+  const { cartState: stateCart, cart } = useSelector(
     (state: IRootState) => state.cart
   );
   const dispatch = useDispatch();
@@ -35,7 +35,7 @@ export const useCart = () => {
     dispatch(purchase({ bln: true }));
   };
   const values = {
-    state,
+    stateCart,
     cart,
   };
 

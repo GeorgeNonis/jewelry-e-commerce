@@ -20,6 +20,7 @@ export interface InitialState {
   notifcation: boolean;
   purchaseState: boolean;
   invoiceState: boolean;
+  emailInfo: boolean;
   cart: {
     quantity: number;
     items: Product[];

@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import * as Comp from "./components";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import { SECRET_KEY, STRIPE_KEY } from "./config";
+import { STRIPE_KEY } from "./config";
 
 const stripePromise = loadStripe(`${STRIPE_KEY}`);
 

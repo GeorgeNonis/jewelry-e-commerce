@@ -36,8 +36,18 @@ const ContactOptions = ({ ...rest }: useContactUsPageObj) => {
               Choose your preferred contact option
             </h3>
             <div className={styles.contactoptions}>
-              <ContactAction {...options.email} handler={values.callHandler} />
-              <Emailform />
+              <ContactAction {...options.email} handler={values.emailHandler} />
+              <div
+                className={styles.emailinfo}
+                ref={values.refEmail}
+                style={
+                  values.cart.emailInfo
+                    ? { height: values.hightEmail }
+                    : undefined
+                }
+              >
+                <Emailform />
+              </div>
               <ContactAction
                 {...options.telephone}
                 handler={values.callHandler}

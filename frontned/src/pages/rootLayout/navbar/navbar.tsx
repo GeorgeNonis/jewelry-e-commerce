@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { allCategories } from "../../../config";
-import styles from "./styles.module.scss";
 import { useNavbar } from "./useNavbar";
 import MobileMenu from "./mobileMenu/mobileMenu";
 import CartQuantity from "./cartQuantity/cartQuantity";
+import styles from "./styles.module.scss";
 
 const Navbar = () => {
   const {
@@ -41,12 +41,12 @@ const Navbar = () => {
           />
         </div>
         {<MobileMenu handler={burgerHandler} crt={burgerState} />}
-        <div className={styles.phone} onClick={burgerHandler}>
+        <div className={styles.phone}>
           <CartQuantity
             cartHandler={cartHandler}
             cartQuantity={cart.quantity}
           />
-          <RxHamburgerMenu />
+          <RxHamburgerMenu onClick={burgerHandler} />
         </div>
       </div>
     </div>

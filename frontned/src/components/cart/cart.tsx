@@ -9,7 +9,7 @@ const Cart = () => {
   return (
     <div
       className={`${styles.shopcart} ${
-        values.state ? styles.show : styles.hide
+        values.stateCart ? styles.show : styles.hide
       }`}
     >
       <div className={styles.backdrop} onClick={handlers.closeMenu}></div>

@@ -11,7 +11,7 @@ const MobileMenu = ({
   crt: boolean;
 }) => {
   const itemsLength = allCategories[4].items.length;
-
+  // console.log({ crt });
   return (
     <div className={`${styles.mobilemenu} ${crt ? styles.show : styles.hide}`}>
       <HiXMark className={styles.xMark} onClick={handler} />

@@ -4,9 +4,9 @@ import styles from "./styles.module.scss";
 import { useEmailform } from "./useEmailform";
 
 const Emailform = () => {
-  const { onChangeHandler, onSumbitHandler, data } = useEmailform();
+  const { handlers, values } = useEmailform();
   return (
-    <form className={styles.mainContent} onSubmit={onSumbitHandler}>
+    <form className={styles.mainContent} onSubmit={handlers.onSumbitHandler}>
       <h3>
         If you have a question or require further information, then please feel
         free to contact us using the form below. We would be happy to help.
@@ -16,9 +16,9 @@ const Emailform = () => {
           <input
             type="radio"
             value={"mr"}
-            checked={data.mr === "mr"}
+            checked={values.data.mr === "mr"}
             name="mr"
-            onChange={onChangeHandler}
+            onChange={handlers.onChangeHandler}
           />
           <label htmlFor="mr">Mr.</label>
         </div>
@@ -27,15 +27,15 @@ const Emailform = () => {
             type="radio"
             value={"ms"}
             name="ms"
-            checked={data.ms === "ms"}
-            onChange={onChangeHandler}
+            checked={values.data.ms === "ms"}
+            onChange={handlers.onChangeHandler}
           />
           <label htmlFor="mr">Ms.</label>
         </div>
       </div>
-      <FormInputs />
+      <FormInputs handlers={handlers} values={values} />
       <Country />
-      <TextArea />
+      <TextArea handlers={handlers} values={values} />
       <button className={styles.sumbitform} role="sumbit">
         Sumbit
       </button>

@@ -7,6 +7,7 @@ const initialState = {
   notifcation: false,
   purchaseState: false,
   invoiceState: false,
+  emailInfo: false,
   cart: {
     quantity: 0,
     items: [],
@@ -22,7 +23,7 @@ const cart = createSlice({
       state.cartState = !state.cartState;
     },
     burgerState(state) {
-      state.cartState = !state.cartState;
+      state.burgerMenu = !state.burgerMenu;
     },
     buynow(state, { payload }) {
       const { quantity, item } = payload;
@@ -104,6 +105,9 @@ const cart = createSlice({
       state.purchaseState = false;
       state.invoiceState = !state.invoiceState;
     },
+    openEmailInfo(state) {
+      state.emailInfo = !state.emailInfo;
+    },
   },
 });
 
@@ -118,6 +122,7 @@ export const {
   purchase,
   invoice,
   buynow,
+  openEmailInfo,
 } = cart.actions;
 
 export default cart.reducer;
