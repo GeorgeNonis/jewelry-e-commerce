@@ -12,15 +12,15 @@
 ### Main technologies used for this project :zap:
 
 <p>
-  <img alt="Vite" src="./frontend/readme_imgs/vite.svg" width="50"/>
-  <img alt="Typescript" src="./frontend/readme_imgs/typescript.png" width="50"/>
-  <img alt="React" src="./frontend/readme_imgs/react.png" width="50"/>
-  <img alt="Redux" src="./frontend/readme_imgs/redux.png" width="50"/>
-  <img alt="github actions" src="./frontend/readme_imgs/github.png" width="50"/>
-  <img alt="git" src="./frontend/readme_imgs/git.png" width="50"/>
-  <img alt="Sass" src="./frontend/readme_imgs/sass.png" width="50"/>
-  <img alt="Css" src="./frontend/readme_imgs/css3.png" width="50"/>
-  <img alt="html5" src="./frontend/readme_imgs/html5.png" width="50"/>
+  <img alt="Vite" src="./readme_imgs/vite.svg" width="50"/>
+  <img alt="Typescript" src="./readme_imgs/typescript.png" width="50"/>
+  <img alt="React" src="./readme_imgs/react.png" width="50"/>
+  <img alt="Redux" src="./readme_imgs/redux.png" width="50"/>
+  <img alt="github actions" src="./readme_imgs/github.png" width="50"/>
+  <img alt="git" src="./readme_imgs/git.png" width="50"/>
+  <img alt="Sass" src="./readme_imgs/sass.png" width="50"/>
+  <img alt="Css" src="./readme_imgs/css3.png" width="50"/>
+  <img alt="html5" src="./readme_imgs/html5.png" width="50"/>
 </p>
 
 <p>The app is fully responsive:iphone: as you can see it yourself through developer's tool's :wrench:</p>
