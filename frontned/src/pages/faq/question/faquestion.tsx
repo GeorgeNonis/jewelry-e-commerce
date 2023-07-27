@@ -10,8 +10,7 @@ const FAQuestion = ({ a, q, isOpen, handler, i }: FAQProps) => {
     handler(i);
     setState(!state);
   };
-  //   console.log({ isOpen });
-  //   console.log(aRef.current?.scrollHeight);
+
   return (
     <div className={styles.faqDiv} onClick={stateHandler}>
       <div className={styles.faqQuestion}>
