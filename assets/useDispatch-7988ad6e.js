@@ -1,0 +1,1 @@
+import{af as e,ag as u,r as c}from"./index-a7dbd6ae.js";function r(t=e){const o=t===e?u:()=>c.useContext(t);return function(){const{store:s}=o();return s}}const a=r();function i(t=e){const o=t===e?a:r(t);return function(){return o().dispatch}}const x=i();export{x as u};
