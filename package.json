@@ -1,5 +1,6 @@
 {
   "name": "nonisecommerce",
+  "homepage": "https://GeorgeNonis.github.io/jewelry-e-commerce/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,13 +8,16 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-google-maps/api": "^2.18.1",
     "@reduxjs/toolkit": "^1.9.5",
     "@stripe/react-stripe-js": "^2.1.0",
     "@stripe/stripe-js": "^1.53.0",
+    "gh-pages": "^6.0.0",
     "google-maps-react": "^2.0.6",
     "react": "^18.2.0",
     "react-country-region-selector": "^3.6.1",

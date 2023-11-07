@@ -2,7 +2,6 @@ import { FormData, FormProps } from "../interfaces";
 import Phone from "./phoneinput";
 import { formInputs } from "../../../../../../config";
 import styles from "../styles/styles.module.scss";
-// import { useEmailform } from "../../useEmailform";
 
 const FormInputs = ({ values, handlers }: FormProps) => {
   return (
