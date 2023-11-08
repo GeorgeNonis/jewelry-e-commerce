@@ -1,1 +1,0 @@
-import{j as e,v as n,L as a}from"./index-a7dbd6ae.js";const r=()=>e.jsxs("div",{className:n.content,children:[e.jsx("h2",{children:"Something went wrong"}),e.jsx("h3",{children:"We apologize for any inconvenience this may caused and we appreciate your understanding"}),e.jsx(a,{to:"/",children:"Head back to the main page"})]});export{r as default};
